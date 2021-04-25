@@ -2183,50 +2183,50 @@ var toReturn = {
 			locked: true,
 			priceBase: 100000,
 			heliumSpent: 0,
-			tooltip: "Apply your skills at salvaging things from the Spire to increase all loot gained by 1.25% per level. The price for this perk increases additively, and each level will cost exactly 10000 more than the previous level.",
+			tooltip: "Apply your skills at salvaging things from the Spire to increase all loot gained by 0.25% per level. The price for this perk increases additively, and each level will cost exactly 10000 more than the previous level.",
 			additive: true,
 			additiveInc: 10000,
-			modifier: 0.0125
+			modifier: 0.0025
 		},
 		Carpentry_II: {
 			level: 0,
 			locked: true,
 			priceBase: 100000,
 			heliumSpent: 0,
-			tooltip: "You've learned to look more objectively at the no longer mysterious building designs, allowing you to increase housing space by 1.25% per level. This multiplies on top of Carpentry I, but the bonus stacks additively. The price for this perk also increases additively, and each level will cost exactly 10000 more than the previous level.",
+			tooltip: "You've learned to look more objectively at the no longer mysterious building designs, allowing you to increase housing space by 0.25% per level. This multiplies on top of Carpentry I, but the bonus stacks additively. The price for this perk also increases additively, and each level will cost exactly 10000 more than the previous level.",
 			additive: true,
 			additiveInc: 10000,
-			modifier: 0.0125
+			modifier: 0.0025
 		},
 		Motivation_II: {
 			level: 0,
 			locked: true,
 			priceBase: 50000,
 			heliumSpent: 0,
-			tooltip: "Corruption and impending doom are great motivators to work a bit harder! Increases Trimp gather speed by 5% per level. The price for this perk increases additively, and each level will cost exactly 1000 more than the previous level.",
+			tooltip: "Corruption and impending doom are great motivators to work a bit harder! Increases Trimp gather speed by 1% per level. The price for this perk increases additively, and each level will cost exactly 1000 more than the previous level.",
 			additive: true,
 			additiveInc: 1000,
-			modifier: 0.05
+			modifier: 0.01
 		},
 		Power_II: {
 			level: 0,
 			locked: true,
 			priceBase: 20000,
 			heliumSpent: 0,
-			tooltip: "You find strength in the desire to some day return home. Anger your Trimps by making them listen to you talk about it all the time, increasing their damage by 5% per level. The price for this perk increases additively, and each level will cost exactly 500 more than the previous level.",
+			tooltip: "You find strength in the desire to some day return home. Anger your Trimps by making them listen to you talk about it all the time, increasing their damage by 1% per level. The price for this perk increases additively, and each level will cost exactly 500 more than the previous level.",
 			additive: true,
 			additiveInc: 500,
-			modifier: 0.05
+			modifier: 0.01
 		},
 		Toughness_II: {
 			level: 0,
 			locked: true,
 			priceBase: 20000,
 			heliumSpent: 0,
-			tooltip: "You feel more grounded as you remember where you came from. Spread your toughness to your Trimps, increasing health by 5% per level. The price for this perk increases additively, and each level will cost exactly 500 more than the previous level.",
+			tooltip: "You feel more grounded as you remember where you came from. Spread your toughness to your Trimps, increasing health by 1% per level. The price for this perk increases additively, and each level will cost exactly 500 more than the previous level.",
 			additive: true,
 			additiveInc: 500,
-			modifier: 0.05
+			modifier: 0.01
 		},
 		Capable: {
 			level: 0,
@@ -2243,7 +2243,7 @@ var toReturn = {
 		Cunning: {
 			level: 0,
 			locked: true,
-			modifier: 1.25,
+			modifier: 0.25,
 			priceBase: 1e11,
 			heliumSpent: 0,
 			get tooltip(){
@@ -2253,7 +2253,7 @@ var toReturn = {
 		Curious: {
 			level: 0,
 			locked: true,
-			modifier: 300,
+			modifier: 60,
 			priceBase: 1e14,
 			heliumSpent: 0,
 			get tooltip() {
@@ -2286,16 +2286,16 @@ var toReturn = {
 		Resourceful: {
 			level: 0,
 			locked: true,
-			modifier: 0.25,
+			modifier: 0.05,
 			priceBase: 50000,
 			heliumSpent: 0,
-			tooltip: "Spending time with limited maps has taught you how to be more resourceful. Each level will allow you to spend 25% fewer resources <b>than the current cost</b> per level on all structures."
+			tooltip: "Spending time with limited maps has taught you how to be more resourceful. Each level will allow you to spend 5% fewer resources <b>than the current cost</b> per level on all structures."
 		},
 		Coordinated: {
 			level: 0,
 			locked: true,
 			priceBase: 150000,
-			modifier: 0.90,
+			modifier: 0.98,
 			heliumSpent: 0,
 			currentSend: 1,
 			onChange: function (overrideLevel) {
@@ -2309,7 +2309,7 @@ var toReturn = {
 				if (overrideLevel) return newValue;
 				this.currentSend = newValue;
 			},
-			tooltip: "Use knowledge gained while studying Coordinated Bad Guys to reduce the amount of Trimps required per level of Coordination by 10% <b>of current amount (compounding)</b>, while keeping the stat bonus the same."
+			tooltip: "Use knowledge gained while studying Coordinated Bad Guys to reduce the amount of Trimps required per level of Coordination by 2% <b>of current amount (compounding)</b>, while keeping the stat bonus the same."
 		},
 		Siphonology: {
 			level: 0,
@@ -2323,7 +2323,7 @@ var toReturn = {
 			level: 0,
 			locked: true,
 			max: 10,
-			modifier: 0.1,
+			modifier: 0.02,
 			priceBase: 1000,
 			heliumSpent: 0,
 			onChange: function () {
@@ -2334,7 +2334,7 @@ var toReturn = {
 			},
 			get tooltip(){
 				var time = game.talents.patience.purchased ? 45 : 30;
-				return "Use your experiences in understanding the attention span of Trimps to increase the damage dealt by all soldiers based on how long it took to get an army together. Increases damage by 10% per level per second up to " + time + " seconds. <b>Maximum of 10 levels.</b>"
+				return "Use your experiences in understanding the attention span of Trimps to increase the damage dealt by all soldiers based on how long it took to get an army together. Increases damage by 2% per level per second up to " + time + " seconds. <b>Maximum of 10 levels.</b>"
 			}
 		},
 		Resilience: {
@@ -2343,19 +2343,19 @@ var toReturn = {
 			radLocked: true,
 			radLevel: 0,
 			radSpent: 0,
-			modifier: 0.5,
+			modifier: 0.1,
 			priceBase: 100,
 			heliumSpent: 0,
-			tooltip: "Use your acquired skills in Trimp strengthening to gain a 50% <b>compounding</b> increase to total Trimp health."
+			tooltip: "Use your acquired skills in Trimp strengthening to gain a 10% <b>compounding</b> increase to total Trimp health."
 		},
 		Meditation: {
 			level: 0,
 			locked: true,
-			modifier: 5,
+			modifier: 1,
 			priceBase: 75,
 			heliumSpent: 0,
 			max: 7,
-			tooltip: "Your experiences in the Dimension of Strong Things have taught you the value of taking your time. Every level of Meditation will increase your Trimps' gather speed by 5% for every 10 minutes spent on the same Zone, up to 1 hour, even when offline. This bonus is reset after clearing the current Zone. <b>Maximum of 7 levels.</b>",
+			tooltip: "Your experiences in the Dimension of Strong Things have taught you the value of taking your time. Every level of Meditation will increase your Trimps' gather speed by 1% for every 10 minutes spent on the same Zone, up to 1 hour, even when offline. This bonus is reset after clearing the current Zone. <b>Maximum of 7 levels.</b>",
 			getBonusPercent: function (justStacks) {
 				var timeOnZone = getGameTime() - game.global.zoneStarted;
 				timeOnZone = Math.floor(timeOnZone / 600000);
@@ -2471,22 +2471,22 @@ var toReturn = {
 			radLocked: true,
 			radLevel: 0,
 			radSpent: 0,
-			modifier: 0.5,
+			modifier: 0.1,
 			priceBase: 25,
 			heliumSpent: 0,
-			tooltip: "You've built quite a few houses and you're getting pretty good at it. Bringing your expertise in construction back through the portal will allow you to house 50% more Trimps per level <b>than the current amount (compounds)</b>."
+			tooltip: "You've built quite a few houses and you're getting pretty good at it. Bringing your expertise in construction back through the portal will allow you to house 10% more Trimps per level <b>than the current amount (compounds)</b>."
 		},
 		Artisanistry: {
 			level: 0,
 			locked: true,
-			modifier: 0.25,
+			modifier: 0.05,
 			priceBase: 15,
 			radLevel: 0,
 			radSpent: 0,
 			radLocked: true,
 			heliumSpent: 0,
-			tooltip: "You're beginning to notice ways to make equally powerful equipment with considerably fewer resources. Bringing back these new ideas will allow you to spend 25% fewer resources <b>than the current cost</b> per level on all equipment."
-		},2
+			tooltip: "You're beginning to notice ways to make equally powerful equipment with considerably fewer resources. Bringing back these new ideas will allow you to spend 5% fewer resources <b>than the current cost</b> per level on all equipment."
+		},
 		Range: {
 			level: 0,
 			locked: true,
@@ -2513,7 +2513,7 @@ var toReturn = {
 		},
 		Bait: {
 			level: 0,
-			modifier: 5,
+			modifier: 1,
 			priceBase: 4,
 			heliumSpent: 0,
 			tooltip: "A few of these in your traps are sure to bring in extra Trimps. Each level allows traps to catch $modifier$ extra Trimp.",
@@ -2525,7 +2525,7 @@ var toReturn = {
 		Trumps: {
 		//fiveTrimpMax worldUnlock
 			level: 0,
-			modifier: 5,
+			modifier: 1,
 			priceBase: 3,
 			heliumSpent: 0,
 			tooltip: "Practicing aggressive strategizing allows you to earn $modifier$ extra max population from each battle territory bonus.",
@@ -2537,10 +2537,10 @@ var toReturn = {
 		//breed main
 		Pheromones: {
 			level: 0,
-			modifier: 0.5,
+			modifier: 0.1,
 			priceBase: 3,
 			heliumSpent: 0,
-			tooltip: "Bring some pheromones with you to ensure that your Trimps will permanently breed 50% faster.",
+			tooltip: "Bring some pheromones with you to ensure that your Trimps will permanently breed 10% faster.",
 			radLevel: 0,
 			radSpent: 0,
 			locked: false,
@@ -2548,9 +2548,9 @@ var toReturn = {
 		},
 		//trapThings main
 		Packrat: {
-			modifier: 1,
+			modifier: 0.2,
 			heliumSpent: 0,
-			tooltip: "Study the ancient, secret Trimp methods of hoarding. Each level increases the amount of stuff you can shove in each Barn, Shed, and Forge by 100%.",
+			tooltip: "Study the ancient, secret Trimp methods of hoarding. Each level increases the amount of stuff you can shove in each Barn, Shed, and Forge by 20%.",
 			priceBase: 3,
 			level: 0,
 			radLevel: 0,
@@ -2561,9 +2561,9 @@ var toReturn = {
 		//updatePs updates
 		//gather main
 		Motivation: {
-			modifier: 0.25,
+			modifier: 0.05,
 			heliumSpent: 0,
-			tooltip: "Practice public speaking with your Trimps. Each level increases the amount of resources that workers produce by 25%.",
+			tooltip: "Practice public speaking with your Trimps. Each level increases the amount of resources that workers produce by 5%.",
 			priceBase: 2,
 			level: 0,
 			radLevel: 0,
@@ -2574,10 +2574,10 @@ var toReturn = {
 		//startFight main
 		Power: {
 			level: 0,
-			modifier: 0.25,
+			modifier: 0.05,
 			priceBase: 1,
 			heliumSpent: 0,
-			tooltip: "Trimps learn through example. Spending some time bench pressing dead Elephimps should inspire any future Trimps to become stronger too. Adds 25% attack permanently to your Trimps.",
+			tooltip: "Trimps learn through example. Spending some time bench pressing dead Elephimps should inspire any future Trimps to become stronger too. Adds 5% attack permanently to your Trimps.",
 			radLevel: 0,
 			radSpent: 0,
 			locked: false,
@@ -2585,10 +2585,10 @@ var toReturn = {
 		},
 		//startFight main
 		Toughness: {
-			modifier: 0.25,
+			modifier: 0.05,
 			priceBase: 1,
 			heliumSpent: 0,
-			tooltip: "Pay your Trimps to knock you around a little bit. By learning to not be such a wuss, your Trimps will be less wussy as well. Adds 25% health permanently to your Trimps.",
+			tooltip: "Pay your Trimps to knock you around a little bit. By learning to not be such a wuss, your Trimps will be less wussy as well. Adds 5% health permanently to your Trimps.",
 			level: 0,
 			radLevel: 0,
 			radSpent: 0,
@@ -2597,10 +2597,10 @@ var toReturn = {
 		},
 		//rewardResources main
 		Looting: {
-			modifier: 0.25,
+			modifier: 0.05,
 			priceBase: 1,
 			heliumSpent: 0,
-			get tooltip(){return "Walk back through the empty Zones, learning how to milk them for every last drop. Each level permanently increases the amount of resources gained from battle (Including " + heliumOrRadon(false, true) + ") by 25%."},
+			get tooltip(){return "Walk back through the empty Zones, learning how to milk them for every last drop. Each level permanently increases the amount of resources gained from battle (Including " + heliumOrRadon(false, true) + ") by 5%."},
 			level: 0,
 			radLevel: 0,
 			radSpent: 0,
@@ -5366,7 +5366,7 @@ var toReturn = {
 			base: 5e8,
 			baseCost: 8,
 			upgrades: 0,
-			modifier: 5,
+			modifier: 1,
 			tickAtFuel: function(fuel){
 				return Math.floor(Math.sqrt(fuel) * ((this.base * 0.1 * this.upgrades) + this.base));
 			},
@@ -5383,7 +5383,7 @@ var toReturn = {
 			baseCost: 32,
 			upgrades: 0,
 			modifier: 3,
-			baseIncrease: 2,
+			baseIncrease: 0.4,
 			cost: function(){
 				return this.baseCost + (32 * this.upgrades);
 			},
@@ -5397,7 +5397,7 @@ var toReturn = {
 		Supply: {
 			base: 0.2,
 			baseCost: 64,
-			baseIncrease: 0.1,
+			baseIncrease: 0.02,
 			upgrades: 0,
 			modifier: 0.2,
 			cost: function(){
@@ -5415,7 +5415,7 @@ var toReturn = {
 		Overclocker: {
 			base: 0.5,
 			baseCost: 512,
-			baseIncrease: 0.05,
+			baseIncrease: 0.01,
 			upgrades: 0,
 			modifier: 0.5,
 			cost: function () {
@@ -5473,7 +5473,7 @@ var toReturn = {
 		}
 	},
 	//Total 4448% after 4.6
-	tierValues: [0, 1.5, 5, 12.5, 25, 50, 100, 200, 400, 800, 1250, 2000, 3750, 6000],
+	tierValues: [0, 0.3, 1, 2.5, 5, 10, 20, 40, 80, 160, 250, 400, 750, 1200],
 	//rip colorsList, 11/28/15 - 11/28/17. He served us well until it became obvious that CSS was better.
 	//colorsList: ["white", "#155515", "#151565", "#551555", "#954515", "#651515", "#951545", "#35a5a5", "#d58565", "#d53535"],
 	achievements: {
